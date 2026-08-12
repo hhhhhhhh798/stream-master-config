@@ -1,9 +1,9 @@
 // ============================================================
-// wrapper.js - محول مستقل (جميع المزودات مدمجة داخله)
+// wrapper.js - محول مستقل (جميع الدوال مدمجة داخله)
 // ============================================================
 
 // ============================================================
-// 🌐 Vixsrc Provider (مدمج)
+// 🌐 Vixsrc Provider (مدمج بالكامل)
 // ============================================================
 const VIXSRC_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -33,7 +33,6 @@ async function fetchVixsrcStream(tmdbId, mediaType = 'movie', seasonNum = null, 
         const embedResponse = await fetch(embedUrl, { headers: VIXSRC_HEADERS });
         const html = await embedResponse.text();
         
-        // استخراج الرابط
         const tokenMatch = html.match(/token["']?\s*:\s*["']([^"']+)["']/i);
         const expiresMatch = html.match(/expires["']?\s*:\s*["']([^"']+)["']/i);
         const playlistMatch = html.match(/["'](https?:\/\/[^"']+\.m3u8[^"']*)["']/i) || 
@@ -56,20 +55,7 @@ async function fetchVixsrcStream(tmdbId, mediaType = 'movie', seasonNum = null, 
 }
 
 // ============================================================
-// 📦 Showbox Provider (مدمج - يعمل مع كوكيز)
-// ============================================================
-async function fetchShowboxStream(tmdbId, mediaType = 'movie', seasonNum = null, episodeNum = null, userCookie = null) {
-    // ملاحظة: هذا مجرد هيكل مبسط، يمكنك إضافة كود Showbox الكامل هنا
-    // إذا كان لديك كود Showbox يعمل، ضعه هنا
-    console.log('[Showbox] محاولة جلب البث من Showbox...');
-    
-    // حالياً نعيد null لأن Showbox يحتاج إلى تكامل أكبر
-    // يمكنك إضافة كود Showbox الكامل هنا لاحقاً
-    return null;
-}
-
-// ============================================================
-// 🚀 الدالة الرئيسية (مع أولوية Showbox ثم Vixsrc)
+// 🚀 الدالة الرئيسية (تجرب Vixsrc فقط)
 // ============================================================
 async function getResource(movieInfo, config, userCookie, callback) {
     try {
@@ -78,33 +64,20 @@ async function getResource(movieInfo, config, userCookie, callback) {
         
         console.log(`[Wrapper] جاري محاولة جلب البث لـ ${tmdbType}/${tmdb_id}...`);
         
-        // 1. محاولة Showbox أولاً
-        const showboxStream = await fetchShowboxStream(tmdb_id, tmdbType, season || null, episode || null, userCookie);
-        if (showboxStream) {
-            console.log(`[Wrapper] Showbox: تم العثور على رابط`);
-            callback({
-                url: showboxStream.url,
-                quality: showboxStream.quality || 'auto',
-                headers: showboxStream.headers || {},
-                subtitles: showboxStream.subtitles || []
-            });
-            return true;
-        }
+        const stream = await fetchVixsrcStream(tmdb_id, tmdbType, season || null, episode || null);
         
-        // 2. إذا فشل Showbox، جرب Vixsrc
-        const vixsrcStream = await fetchVixsrcStream(tmdb_id, tmdbType, season || null, episode || null);
-        if (vixsrcStream) {
+        if (stream) {
             console.log(`[Wrapper] Vixsrc: تم العثور على رابط`);
             callback({
-                url: vixsrcStream.url,
-                quality: vixsrcStream.quality || 'auto',
-                headers: vixsrcStream.headers || {},
+                url: stream.url,
+                quality: stream.quality || 'auto',
+                headers: stream.headers || {},
                 subtitles: []
             });
             return true;
         }
         
-        console.log('[Wrapper] لم يتم العثور على أي روابط');
+        console.log('[Wrapper] لم يتم العثور على روابط');
         return false;
     } catch (error) {
         console.error('[Wrapper] خطأ:', error.message);
