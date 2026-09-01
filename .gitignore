@@ -1,0 +1,9 @@
+node_modules/
+.env
+error.log
+movies.db
+*.db
+
+# Never commit provider signing private keys
+provider-signing-private.pem
+*.private.pem

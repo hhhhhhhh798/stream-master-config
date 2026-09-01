@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "algorithm": "SHA256withECDSA",
+  "providers": {
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/Showbox.js": {
+      "sha256": "506131f7161ec88c40e84453e626b23fbcdf7fb2a14d1ecafb9a01bcab37f8dc",
+      "signature": "MEQCIHIum0PLsW+xiH0mllY2UMGM4c7Yj+fVdbvUedeCXXmhAiBJz5ZfVGHJErfQa+w+OQVgfbn40VvFyUk2AQCgnGMDVg=="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/wrapper.js": {
+      "sha256": "e99adf1e4a841fdbcaa90e46aa2efb9f050472fec57900458a6a5f608781089f",
+      "signature": "MEUCIQC4EDJkIYUR1eTgdH6E8v58KWlGA2UxsYZvixW0fu8vZQIgGnkpunutzT2kqz2T6IdlxBOK+mJt+khxasLCc5PAKII="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/vixsrc.js": {
+      "sha256": "7741196fb73e27de0a0c6bef6514a54dd1c52b572f9153918695d293fb733384",
+      "signature": "MEUCIQDduAWulC3vJuavc4IIWhtElFlaKicwQXURYgefy24LdAIgX4dNIKw+yy7oXs4qY9ldfixbe0lWtrJe6Pe7bXro5aM="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/registry.js": {
+      "sha256": "830f6d1ea435e38494ec43f5ddb9b5559ecaac345afb1d60eb94622ec3b4aa31",
+      "signature": "MEUCIQDo+UOD6+o2ZjAoG7zp+rdY0nT9t3MYQ9DxnIiR9KhUHAIgKVCesUQaG9wb/rcxf3zwXmtWTWeKvpTD2JG5gkPdECw="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/superembed.js": {
+      "sha256": "ae9abf82dd4734eeb5fb95ee2bc7cf069cc51ffd2ce9ae6d918f448bf21db216",
+      "signature": "MEYCIQDNZQ7931FvL0Ba40Wwt3HHtg+e8OU38NMNnpX7TUbCiAIhAPEAVtIK5RhANr/L95QJ+NNo37ktHZPUSHQyV6sbc/2U"
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/tmdb.js": {
+      "sha256": "a212955443634776e375ef88f2e588b108dd20db287e8dd132ca0a396272d06d",
+      "signature": "MEQCICF4gv0AYBtuwRx9wZN/UyHpekLfwVVEBMymj9gEh+OTAiBuidZSKdCEg7fzFTqy3re/kLU0HSS2K4EdieCqjJzWLQ=="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/auth.js": {
+      "sha256": "2588e611d2c41a30ef48e7038ef05ddd2ed035076788f1b124db3b8c25b997b1",
+      "signature": "MEUCIF0pX50RF3GfLhcVorvWQr3zxuht0Zfo7YbatHVK4W6BAiEA/MzarjQlWX8GjKTpYpn9Q5SZa6zAITt1LXidYZ8eCao="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/tmdbKey.js": {
+      "sha256": "d7a6d2920235f7008af57ca2dceee58c64f0d49809b2ad778c679f89969a007b",
+      "signature": "MEUCIGgdk7wQj9doNPHsYUuDdwRMeGfVzPBZtRQXQE3QPVn8AiEA2X9Ja4bH3/VPy4BK9FMBfKHdAAsd8P/lLnncSq/JLP0="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/jsunpack.js": {
+      "sha256": "e2b3c25a88705f6f65f95a6646aa2a1fbbfb7a32085eb5c658e9760bf15d509d",
+      "signature": "MEQCIB1X+XNvnWGiIQvxuzTDlz8eBDAViaKtfWoS2DHXzzJHAiAIc39s6l9647jmEG30NUkthco1o3vwfAvTAU27II3CIQ=="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/config.js": {
+      "sha256": "08c14234ece6fc3c05d454da26ac008cf8c28c5ea4bac1a0422e48965470420c",
+      "signature": "MEQCIHQd2zvV4Nu/zD8UIHAfV5wzVcoiIiw/Q0youT4PafqIAiAu1pi0GCVcDQaNX/6dvrYNlqxOBOgLoxYNcrIM7qgQwg=="
+    },
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/utils/streamFilters.js": {
+      "sha256": "ff0feb1d1afec618e3a511e994709e457c70a9704e2940b9808dda0a83b16bed",
+      "signature": "MEYCIQC/iVFmPCea4UAFPXCIxYxgWQEElksFi855WdDyXTuZiAIhAPpYuFWRRT6tqOedwjExN/8800RWmIqyxY5bZixW0hcG"
+    }
+  }
+}
