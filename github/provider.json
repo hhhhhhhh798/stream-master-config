@@ -1,7 +1,5 @@
 {
   "providers": [
-    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/Showbox.js",
-    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/vixsrc.js",
-    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/wrapper.js"
+    "https://raw.githubusercontent.com/hhhhhhhh798/stream-master-config/main/github/providers/Showbox.js"
   ]
 }
